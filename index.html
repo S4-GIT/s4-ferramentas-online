@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S4 Ferramentas Online</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="splash-screen">
+    <img src="https://i.imgur.com/hLebwo1.png alt="S4 Logo" id="logo" />
+  </div>
+
+  <div id="main-content">
+    <header>
+      <h1>Bem-vindo à S4 Ferramentas Online</h1>
+      <p>S4 é uma marca focada em fornecer ferramentas online úteis para facilitar a sua vida no dia a dia. Explore nossas ferramentas e encontre a solução que você precisa!</p>
+    </header>
+  
+    <nav>
+      <ul>
+        <li><a href="https://s4-git.github.io/s4-gerador-de-senhas/" target="_blank">Gerador de senhas</a></li>
+      </ul>
+    </nav>
+  
+    <footer>
+      <p>S4 Ferramentas Online - Todos os direitos reservados &copy; 2024</p>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        // Esconde a tela de introdução (splash screen)
+        document.getElementById('splash-screen').style.display = 'none';
+        
+        // Remove o desfoque da página principal
+        document.body.style.filter = 'blur(0px)';
+        
+        // Torna o conteúdo da página visível
+        document.getElementById('main-content').style.opacity = 1;
+      }, 3000); // O tempo da animação da logo (3 segundos)
+    });
+  </script>
+</body>
+</html>

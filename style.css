@@ -1,0 +1,155 @@
+/* Definindo um fundo com gradiente */
+body {
+  background: linear-gradient(to right, #1e2a47, #3c4a9b); /* Gradiente suave de azul */
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Tela de introdução com logo */
+#splash-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeInLogo 3s ease-out forwards;
+}
+
+/* Logo */
+#logo {
+  width: 150px;
+  animation: logoAnimation 2s ease-out forwards;
+}
+
+/* Efeito de animação para a logo */
+@keyframes fadeInLogo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Conteúdo principal */
+#main-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+  max-width: 900px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* Cabeçalho */
+header {
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  animation: fadeInText 2s ease-out forwards;
+}
+
+/* Efeito de animação para o texto */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #b6c1e0;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  animation: fadeInText 2s ease-out forwards;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+nav ul li {
+  margin: 15px;
+}
+
+nav ul li a {
+  background-color: #00d1b2;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+nav ul li a:hover {
+  background-color: #1a9271;
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Rodapé */
+footer {
+  margin-top: 50px;
+  color: #b6c1e0;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Animações para o conteúdo */
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
